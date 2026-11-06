@@ -1,0 +1,6 @@
+[Entry]
+CATEGORY=Games
+NAME=Max Payne
+DESCRIPTION=Running natively via Rockstar's Android build
+COMMAND=/home/player/ports/maxpayne/start.sh
+ICON=/home/player/ports/maxpayne/icon.png
