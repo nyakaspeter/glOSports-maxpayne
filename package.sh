@@ -19,4 +19,5 @@ cp start.sh alsoft.conf $out/ && cp maxpayne.puppy out/.local/share/applications
 echo "Game files go here: see README.md (libMaxPayne.so, the APK's assets/, the OBB's contents)." > $out/game/place-game-files-here.txt
 cp "$GLOS"/glos-gpu "$GLOS"/glos-gpu-switch "$GLOS"/mali.ko "$GLOS"/glos_fbfix.ko $out/glos/ && cp "$GLOS"/lib/* $out/glos/lib/
 mkdir -p $out/licenses && cp licenses/* $out/licenses/
+cp LICENSE $out/licenses/LICENSE.txt
 ls -la $out $out/lib $out/glos
