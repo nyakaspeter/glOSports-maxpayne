@@ -47,10 +47,10 @@ first swap); a flip that lands after its wait gave up must not leave the
 flip count ahead of the swaps, or every later frame tears again; and the
 driver merges the flips of frames swapped while it was behind (around a
 loading screen), so the missing ones never come: waiting for them cost
-every later frame the full 100 ms (found in `glOSports-gtavcs` as a steady
-10 fps). So a wait that gives up starts counting afresh, a flip is never
-counted ahead of the swaps, and a swap is counted before `eglSwapBuffers`
-(its flip can land before that returns).
+every later frame the full 100 ms (a steady 10 fps). So a wait that gives
+up starts counting afresh, a flip is never counted ahead of the swaps, and
+a swap is counted before `eglSwapBuffers` (its flip can land before that
+returns).
 `MP_VSYNC=0` turns the wait and the swap interval off. `MP_PAN_TRACE=n`
 (with `MP_PAN_TRACE_DELAY` seconds) logs n swap and flip events with times.
 A thread waiting in `FBIO_WAITFORVSYNC` alongside doubles the flip time
